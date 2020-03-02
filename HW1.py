@@ -72,6 +72,32 @@ def sigmoid_derivative(x):
 #####
 x = np.array([1, 2, 3])
 print ("sigmoid_derivative(x) = " + str(sigmoid_derivative(x)))
+
+
+
+
+
+
+
+# In[12]:
+    #補充
+import math
+import matplotlib.pyplot as plt
+import numpy as np    
+x = np.arange(-10., 10., 0.2)
+x1=1/(1+np.exp(-x))
+x2=x1*(1-x1)
+
+plt.plot(x,x1)
+plt.plot(x,x2)
+plt.show()
+
+
+
+
+
+
+
 # In[7]:
     #3.3 Reshaping arrays
 # GRADED FUNCTION: image2vector
@@ -112,7 +138,6 @@ def normalizeRows(x):
     ### START CODE HERE ### (~ 2 lines of code)
     # Compute x norm as the norm 2 of x. Use np.linalg.norm(..., ord = 2, axis = ...,keepdims = True)
     x_norm = np.linalg.norm(x,axis = 1,keepdims = True)
-    x_norm
     # Divide x by its norm.
     x =x/x_norm
     ### END CODE HERE ###
@@ -255,3 +280,6 @@ def L2(yhat, y):
 yhat = np.array([.9, 0.2, 0.1, .4, .9])
 y = np.array([1, 0, 0, 1, 1])
 print("L2 = " + str(L2(yhat,y)))
+
+
+
